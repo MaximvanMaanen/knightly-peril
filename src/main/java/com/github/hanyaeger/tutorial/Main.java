@@ -2,6 +2,7 @@ package com.github.hanyaeger.tutorial;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
+import com.github.hanyaeger.tutorial.constants.SceneConstants;
 import com.github.hanyaeger.tutorial.scenes.MainMenuScene;
 
 public class Main extends YaegerGame {
@@ -17,6 +18,7 @@ public class Main extends YaegerGame {
 
     @Override
     public void setupScenes() {
-        addScene(0, new MainMenuScene(this));
+        addScene(SceneConstants.MAIN_MENU, new MainMenuScene(this));
+        addScene(SceneConstants.LEVEL_ONE, new MainMenuScene(this));
     }
 }
