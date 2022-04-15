@@ -19,15 +19,16 @@ public class MainMenuScene extends StaticScene {
 
     @Override
     public void setupScene() {
-        setBackgroundAudio("audio/theme.mp3");
+        setBackgroundAudio("audio/theme.mp4");
+        setBackgroundAudioVolume(0.15);
         setBackgroundImage("backgrounds/background1.jpg");
     }
 
     @Override
     public void setupEntities() {
-        var mainMenuText = new TextEntity(new Coordinate2D(getWidth() / 2, getHeight() / 2), "Knightly Peril");
+        var mainMenuText = new TextEntity(new Coordinate2D(getWidth() * 0.5, getHeight() - (getHeight() * 0.8)), "Knightly Peril");
         mainMenuText.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
-        mainMenuText.setFill(Color.LIGHTBLUE);
+        mainMenuText.setFill(Color.RED);
         mainMenuText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
         addEntity(mainMenuText);
     }
