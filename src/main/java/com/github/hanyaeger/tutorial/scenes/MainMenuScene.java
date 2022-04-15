@@ -20,7 +20,7 @@ public class MainMenuScene extends StaticScene {
     @Override
     public void setupScene() {
         setBackgroundAudio("audio/theme.mp4");
-        setBackgroundAudioVolume(0.15);
+        setBackgroundAudioVolume(0.3);
         setBackgroundImage("backgrounds/background1.jpg");
     }
 
