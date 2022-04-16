@@ -2,8 +2,11 @@ package com.github.hanyaeger.tutorial.entities.map;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
+import com.github.hanyaeger.tutorial.entities.knight.KnightHitbox;
 
 /**
  * A {@code Coral} is just a basic {@link SpriteEntity} that implements {@link Collider}. Since
@@ -14,9 +17,23 @@ import com.github.hanyaeger.api.entities.impl.SpriteEntity;
  * {@link com.github.hanyaeger.api.scenes.TileMap}, the third parameter of
  * {@link com.github.hanyaeger.api.scenes.TileMap#addEntity(int, Class, Object)} will be used.
  */
-public class Coral extends SpriteEntity implements Collider {
+public class Coral extends SpriteEntity implements Collided {
+
+    private Collider collider;
 
     public Coral(final Coordinate2D location, final Size size, final String resource) {
         super(resource, location, size);
+
+    }
+
+    @Override
+    public void onCollision(Collider collider) {
+
+        // Currently hardcoded for the Knight Hitbox.
+        if(collider instanceof KnightHitbox knightHitbox)
+        {
+            // It is very likely that this throws a silent error.
+            knightHitbox.knight.nullifySpeedInDirection(Direction.DOWN);
+        }
     }
 }
