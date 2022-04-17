@@ -8,4 +8,5 @@ module waterworld {
     opens backgrounds;
     opens sprites;
     opens sprites.knight;
+    opens sprites.floor;
 }
