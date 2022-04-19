@@ -10,4 +10,5 @@ module waterworld {
     opens sprites.knight;
     opens sprites.floor;
     opens sprites.decorations;
+    opens sprites.user_interface;
 }
