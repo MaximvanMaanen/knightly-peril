@@ -3,6 +3,7 @@ module waterworld {
 
     exports com.github.hanyaeger.tutorial;
     exports com.github.hanyaeger.tutorial.entities.map;
+    exports com.github.hanyaeger.tutorial.entities.pickups;
 
     opens audio;
     opens backgrounds;
