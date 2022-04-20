@@ -4,13 +4,16 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.entities.score.Score;
 import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
 public class Knight extends DynamicCompositeEntity implements KeyListener {
+    public Score score;
     public Knight(Coordinate2D initialLocation) {
         super(initialLocation);
+        this.score = new Score();
     }
 
     private KnightSprite sprite;
