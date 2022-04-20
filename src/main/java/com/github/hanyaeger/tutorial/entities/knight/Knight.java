@@ -2,6 +2,7 @@ package com.github.hanyaeger.tutorial.entities.knight;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import com.github.hanyaeger.tutorial.entities.score.Score;
@@ -11,24 +12,37 @@ import java.util.Set;
 
 public class Knight extends DynamicCompositeEntity implements KeyListener {
     public Score score;
+    private KnightSprite sprite;
+    private KnightHitbox hitbox;
+
     public Knight(Coordinate2D initialLocation) {
         super(initialLocation);
         this.score = new Score();
     }
 
-    private KnightSprite sprite;
-    private KnightHitbox hitbox;
-
     @Override
     protected void setupEntities() {
+        addEntity(createKnightSprite());
+        addEntity(createKnightHitbox());
+    }
+
+    private KnightSprite createKnightSprite()
+    {
         this.sprite = new KnightSprite(
                 new Coordinate2D(0,0),
                 new Size(200, 800),
                 1, 10);
-        addEntity(sprite);
 
-        this.hitbox = new KnightHitbox(new Coordinate2D(75, 70), this);
-        addEntity(hitbox);
+        return this.sprite;
+    }
+
+    private KnightHitbox createKnightHitbox()
+    {
+        this.hitbox = new KnightHitbox(
+                new Coordinate2D(75, 70),
+                this);
+
+        return this.hitbox;
     }
 
     @Override
