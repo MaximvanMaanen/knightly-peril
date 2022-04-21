@@ -1,6 +1,7 @@
 package com.github.hanyaeger.tutorial.entities.map;
 
 import com.github.hanyaeger.api.scenes.TileMap;
+import com.github.hanyaeger.tutorial.entities.pickups.HealthPotion;
 import com.github.hanyaeger.tutorial.entities.pickups.MoneyBag;
 import com.github.hanyaeger.tutorial.entities.pickups.ConfigurationModels.MoneyBagConfigurationModel;
 

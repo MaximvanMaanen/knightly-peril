@@ -4,7 +4,6 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
-import com.github.hanyaeger.tutorial.entities.health.Health;
 import com.github.hanyaeger.tutorial.entities.knight.Knight;
 
 public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
@@ -13,8 +12,10 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private HealthbarBackgroundTwo backgroundTwo;
     private Knight knight;
 
-    int healthbarWidth = 100;
-    int healthbarHeight = 7;
+    private final int totalHealthBarWidth = 100;
+    private int healthBarWidth = 100;
+    private int healthBarHeight = 7;
+
 
     public Healthbar(Coordinate2D initialLocation, Knight knight){
         super(initialLocation);
@@ -28,13 +29,18 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
         addEntity(createHealthbarBackgroundTwo());
     }
 
-    public void setHealthBarWidth(int health) {
-        if (health == 3) {
-            healthbarWidth = 100;
-        } else if (health == 2) {
-            healthbarWidth = 66;
-        } else {
-            healthbarWidth = 33;
+    private void setHealthBarWidth(int health) {
+        switch(health)
+        {
+            case 1:
+                // Set the Healthbar Sprite.
+                break;
+            case 2:
+                // Set the Healthbar Sprite.
+                break;
+            case 3:
+                // Set the Healthbar Sprite.
+                break;
         }
     }
 
@@ -50,7 +56,7 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     {
         this.healthbarSprite = new HealthbarSprite(
             new Coordinate2D(18,13),
-            new Size(healthbarWidth, healthbarHeight)
+            new Size(healthBarWidth, healthBarHeight)
             );
 
         return this.healthbarSprite;

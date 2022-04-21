@@ -1,17 +1,14 @@
-package com.github.hanyaeger.tutorial.entities.map;
+package com.github.hanyaeger.tutorial.entities.pickups;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
-import com.github.hanyaeger.api.entities.impl.SpriteEntity;
-import com.github.hanyaeger.tutorial.entities.health.Health;
 import com.github.hanyaeger.tutorial.entities.knight.KnightHitbox;
 
-public class HealthPotion extends SpriteEntity implements Collided {
+public class HealthPotion extends BaseCollectible {
 
     public HealthPotion(final Coordinate2D location, final Size size, final String resource) {
-        super(resource, location, size);
+        super(location, size, resource);
     }
 
     @Override
@@ -20,9 +17,10 @@ public class HealthPotion extends SpriteEntity implements Collided {
         {
             if (knightHitbox.knight.health.totalHealth < 3) {
                 knightHitbox.knight.health.totalHealth++;
+                super.onCollision(collider);
             }
-            this.remove();
         }
+
     }
 }
 

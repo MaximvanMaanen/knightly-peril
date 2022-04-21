@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
-abstract class BaseCollectible extends SpriteEntity implements Collided
+public abstract class BaseCollectible extends SpriteEntity implements Collided
 {
     public BaseCollectible(final Coordinate2D location, final Size size, final String resource) {
         super(resource, location, size);
