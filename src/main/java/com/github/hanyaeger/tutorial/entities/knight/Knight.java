@@ -5,18 +5,21 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.entities.health.Health;
 import com.github.hanyaeger.tutorial.entities.score.Score;
 import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
 public class Knight extends DynamicCompositeEntity implements KeyListener {
+    public Health health;
     public Score score;
     private KnightSprite sprite;
     private KnightHitbox hitbox;
 
     public Knight(Coordinate2D initialLocation) {
         super(initialLocation);
+        this.health = new Health();
         this.score = new Score();
     }
 
