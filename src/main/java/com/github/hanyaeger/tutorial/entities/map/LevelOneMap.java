@@ -1,6 +1,7 @@
 package com.github.hanyaeger.tutorial.entities.map;
 
 import com.github.hanyaeger.api.scenes.TileMap;
+import com.github.hanyaeger.tutorial.entities.pickups.MoneyBag;
 
 public class LevelOneMap extends TileMap {
 
@@ -14,6 +15,8 @@ public class LevelOneMap extends TileMap {
         addEntity(6, Coral.class, "sprites/coral1.png"); // dit word een gem
         addEntity(7, Floor.class, "sprites/decorations/platform_4.png");
         addEntity(8, HealthPotion.class, "sprites/decorations/potion.png");
+        addEntity(200, MoneyBag.class, "sprites/decorations/valuables/bag_1.png");
+        addEntity(201, MoneyBag.class, "sprites/decorations/valuables/bag_2.png");
     }
 
     @Override
@@ -22,7 +25,7 @@ public class LevelOneMap extends TileMap {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 201, 0, 200},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
