@@ -3,6 +3,7 @@ module waterworld {
 
     exports com.github.hanyaeger.tutorial;
     exports com.github.hanyaeger.tutorial.entities.map;
+    exports com.github.hanyaeger.tutorial.entities.pickups;
 
     opens audio;
     opens backgrounds;
@@ -10,5 +11,6 @@ module waterworld {
     opens sprites.knight;
     opens sprites.floor;
     opens sprites.decorations;
+    opens sprites.decorations.valuables;
     opens sprites.user_interface;
 }
