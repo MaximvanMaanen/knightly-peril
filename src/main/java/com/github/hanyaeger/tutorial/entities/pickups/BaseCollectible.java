@@ -13,14 +13,12 @@ abstract class BaseCollectible extends SpriteEntity implements Collided
     }
 
     /**
-     * 
+     * Triggers the collision and removes the child from the memory.
+     * @
      * @param collider
      */
     @Override
     public void onCollision(Collider collider) {
-        if(collider instanceof SpriteEntity spriteEntity)
-        {
-            spriteEntity.remove();
-        }
+        this.remove();
     }
 }
