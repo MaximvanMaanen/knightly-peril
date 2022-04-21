@@ -6,15 +6,15 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 import com.github.hanyaeger.tutorial.entities.knight.KnightHitbox;
+import com.github.hanyaeger.tutorial.entities.pickups.ConfigurationModels.MoneyBagConfigurationModel;
 
-public class MoneyBag extends SpriteEntity implements Collided {
+public class MoneyBag extends BaseCollectible {
     private int scoreWorth;
 
-    public MoneyBag(final Coordinate2D location, final Size size, final String resource) {
-        super(resource, location, size);
+    public MoneyBag(final Coordinate2D location, final Size size, MoneyBagConfigurationModel configurationModel) {
+        super(location, size, configurationModel.moneyBagSprite);
 
-        // Find a way to instantiate this from the constructor
-        this.scoreWorth = 10;
+        this.scoreWorth = configurationModel.scoreWorth;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class MoneyBag extends SpriteEntity implements Collided {
         if(collider instanceof KnightHitbox knightHitbox)
         {
             knightHitbox.knight.score.totalScore += this.scoreWorth;
-            this.remove();
+            super.onCollision(collider);
         }
     }
 }

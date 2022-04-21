@@ -13,4 +13,5 @@ module waterworld {
     opens sprites.decorations;
     opens sprites.decorations.valuables;
     opens sprites.user_interface;
+    exports com.github.hanyaeger.tutorial.entities.pickups.ConfigurationModels;
 }
