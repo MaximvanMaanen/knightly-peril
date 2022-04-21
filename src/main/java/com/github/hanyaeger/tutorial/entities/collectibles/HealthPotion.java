@@ -6,11 +6,10 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.tutorial.entities.collectibles.BaseCollectible;
 import com.github.hanyaeger.tutorial.entities.knight.KnightHitbox;
-
+import static com.github.hanyaeger.tutorial.entities.health.Health.maxTotalHealth;
 import java.util.List;
 
 public class HealthPotion extends BaseCollectible implements Collided {
-
     public HealthPotion(final Coordinate2D location, final Size size, final String resource) {
         super(location, size, resource);
     }

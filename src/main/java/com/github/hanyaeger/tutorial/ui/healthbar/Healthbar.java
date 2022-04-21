@@ -11,7 +11,6 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private HealthbarRectangle healthbarRectangle;
     private HealthbarBackgroundTwo backgroundTwo;
     private Knight knight;
-
     private final int maxHealthbarWidth = 100;
     private final int maxHealthbarHeight = 7;
 
