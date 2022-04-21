@@ -1,0 +1,14 @@
+module:waterworld
+com.github.hanyaeger.tutorial
+com.github.hanyaeger.tutorial.constants
+com.github.hanyaeger.tutorial.entities
+com.github.hanyaeger.tutorial.entities.buttons
+com.github.hanyaeger.tutorial.entities.knight
+com.github.hanyaeger.tutorial.entities.map
+com.github.hanyaeger.tutorial.entities.pickups
+com.github.hanyaeger.tutorial.entities.pickups.ConfigurationModels
+com.github.hanyaeger.tutorial.entities.score
+com.github.hanyaeger.tutorial.entities.text
+com.github.hanyaeger.tutorial.scenes
+com.github.hanyaeger.tutorial.spawners
+com.github.hanyaeger.tutorial.ui.healthbar
