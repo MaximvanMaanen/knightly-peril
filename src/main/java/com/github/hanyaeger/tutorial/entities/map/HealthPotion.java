@@ -22,8 +22,8 @@ public class HealthPotion extends SpriteEntity implements Collided {
         {
             if (this.health.health < 3) {
                 this.health.health++;
-                this.remove();
             }
+            this.remove();
         }
     }
 }
