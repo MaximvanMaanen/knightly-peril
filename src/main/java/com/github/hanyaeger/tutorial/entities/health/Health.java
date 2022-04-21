@@ -1,10 +1,10 @@
 package com.github.hanyaeger.tutorial.entities.health;
 
 public class Health {
-    public int health;
+    public int totalHealth;
 
     public Health()
     {
-        health = 3;
+        totalHealth = 1;
     }
 }

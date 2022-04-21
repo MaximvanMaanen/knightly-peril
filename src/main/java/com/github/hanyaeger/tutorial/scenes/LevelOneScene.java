@@ -23,8 +23,8 @@ public class LevelOneScene extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupEntities() {
-        setupKnightEntity();
-        setupUiEntities();
+        var knight = setupKnightEntity();
+        setupUiEntities(knight);
     }
 
     @Override
@@ -32,13 +32,14 @@ public class LevelOneScene extends DynamicScene implements TileMapContainer {
         addTileMap(new LevelOneMap());
     }
 
-    private void setupKnightEntity() {
+    private Knight setupKnightEntity() {
         var knight = new Knight(new Coordinate2D(10, 800));
         addEntity(knight);
+        return knight;
     }
 
-    private void setupUiEntities() {
-        var healthbar = new Healthbar(new Coordinate2D(10, 10));
+    private void setupUiEntities(Knight knight) {
+        var healthbar = new Healthbar(new Coordinate2D(10, 10), knight);
         addEntity(healthbar);
     }
 }

@@ -2,21 +2,23 @@ package com.github.hanyaeger.tutorial.ui.healthbar;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.tutorial.entities.health.Health;
+import com.github.hanyaeger.tutorial.entities.knight.Knight;
 
-public class Healthbar extends DynamicCompositeEntity {
-    public Health health;
+public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private HealthbarBackgroundOne backgroundOne;
     private HealthbarSprite healthbarSprite;
     private HealthbarBackgroundTwo backgroundTwo;
+    private Knight knight;
+
     int healthbarWidth = 100;
     int healthbarHeight = 7;
 
-    public Healthbar(Coordinate2D initialLocation){
+    public Healthbar(Coordinate2D initialLocation, Knight knight){
         super(initialLocation);
-        this.health = new Health();
-        setHealthBarWidth(this.health.health);
+        this.knight = knight;
     }
 
     @Override
@@ -60,5 +62,11 @@ public class Healthbar extends DynamicCompositeEntity {
                 new Coordinate2D(10,10));
 
         return this.backgroundTwo;
+    }
+
+    @Override
+    public void explicitUpdate(long l) {
+        if(knight == null) return;
+        setHealthBarWidth(knight.health.totalHealth);
     }
 }

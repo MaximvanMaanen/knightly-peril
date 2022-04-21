@@ -9,19 +9,17 @@ import com.github.hanyaeger.tutorial.entities.health.Health;
 import com.github.hanyaeger.tutorial.entities.knight.KnightHitbox;
 
 public class HealthPotion extends SpriteEntity implements Collided {
-    public Health health;
 
     public HealthPotion(final Coordinate2D location, final Size size, final String resource) {
         super(resource, location, size);
-        this.health = new Health();
     }
 
     @Override
     public void onCollision(Collider collider) {
         if(collider instanceof KnightHitbox knightHitbox)
         {
-            if (this.health.health < 3) {
-                this.health.health++;
+            if (knightHitbox.knight.health.totalHealth < 3) {
+                knightHitbox.knight.health.totalHealth++;
             }
             this.remove();
         }
