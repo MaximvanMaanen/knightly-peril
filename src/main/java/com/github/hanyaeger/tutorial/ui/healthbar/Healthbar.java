@@ -4,17 +4,16 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
-import com.github.hanyaeger.tutorial.entities.health.Health;
 import com.github.hanyaeger.tutorial.entities.knight.Knight;
 
 public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private HealthbarBackgroundOne backgroundOne;
-    private HealthbarSprite healthbarSprite;
+    private HealthbarRectangle healthbarRectangle;
     private HealthbarBackgroundTwo backgroundTwo;
     private Knight knight;
 
-    int healthbarWidth = 100;
-    int healthbarHeight = 7;
+    private final int maxHealthbarWidth = 100;
+    private final int maxHealthbarHeight = 7;
 
     public Healthbar(Coordinate2D initialLocation, Knight knight){
         super(initialLocation);
@@ -30,11 +29,11 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
 
     public void setHealthBarWidth(int health) {
         if (health == 3) {
-            healthbarWidth = 100;
+            healthbarRectangle.setWidth(100);
         } else if (health == 2) {
-            healthbarWidth = 66;
+            healthbarRectangle.setWidth(66);
         } else {
-            healthbarWidth = 33;
+            healthbarRectangle.setWidth(33);
         }
     }
 
@@ -46,14 +45,14 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
         return this.backgroundOne;
     }
 
-    private HealthbarSprite createHealthBar ()
+    private HealthbarRectangle createHealthBar ()
     {
-        this.healthbarSprite = new HealthbarSprite(
+        this.healthbarRectangle = new HealthbarRectangle(
             new Coordinate2D(18,13),
-            new Size(healthbarWidth, healthbarHeight)
+            new Size(maxHealthbarWidth, maxHealthbarHeight)
             );
 
-        return this.healthbarSprite;
+        return this.healthbarRectangle;
     }
 
     private HealthbarBackgroundTwo createHealthbarBackgroundTwo ()
@@ -66,7 +65,6 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
 
     @Override
     public void explicitUpdate(long l) {
-        if(knight == null) return;
         setHealthBarWidth(knight.health.totalHealth);
     }
 }

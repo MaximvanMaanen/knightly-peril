@@ -8,6 +8,8 @@ import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 import com.github.hanyaeger.tutorial.entities.health.Health;
 import com.github.hanyaeger.tutorial.entities.knight.KnightHitbox;
 
+import static com.github.hanyaeger.tutorial.entities.health.Health.maxTotalHealth;
+
 public class HealthPotion extends SpriteEntity implements Collided {
 
     public HealthPotion(final Coordinate2D location, final Size size, final String resource) {
@@ -18,7 +20,7 @@ public class HealthPotion extends SpriteEntity implements Collided {
     public void onCollision(Collider collider) {
         if(collider instanceof KnightHitbox knightHitbox)
         {
-            if (knightHitbox.knight.health.totalHealth < 3) {
+            if (knightHitbox.knight.health.totalHealth < maxTotalHealth) {
                 knightHitbox.knight.health.totalHealth++;
             }
             this.remove();
