@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
 
 import java.util.List;
 
-public class KnightHitbox extends RectangleEntity implements Collided {
+public class KnightHitbox extends RectangleEntity implements Collided, Collider {
     public Knight knight;
     private final int knightHitboxWidth = 35;
     private final int knightHitboxHeight = 65;

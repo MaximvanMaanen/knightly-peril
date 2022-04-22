@@ -1,6 +1,8 @@
 package com.github.hanyaeger.tutorial.entities.map;
 
 import com.github.hanyaeger.api.scenes.TileMap;
+import com.github.hanyaeger.tutorial.entities.collectibles.ConfigurationModels.MoneyBagConfigurationModel;
+import com.github.hanyaeger.tutorial.entities.collectibles.HealthPotion;
 import com.github.hanyaeger.tutorial.entities.collectibles.MoneyBag;
 
 public class LevelOneMap extends TileMap {
