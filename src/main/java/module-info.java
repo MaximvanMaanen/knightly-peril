@@ -7,7 +7,6 @@ module waterworld {
 
     opens audio;
     opens backgrounds;
-    opens sprites;
     opens sprites.knight;
     opens sprites.floor;
     opens sprites.decorations;
