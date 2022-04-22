@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial.entities.pickups.ConfigurationModels;
+package com.github.hanyaeger.tutorial.entities.collectibles.ConfigurationModels;
 
 public class MoneyBagConfigurationModel {
     public final String moneyBagSprite;
