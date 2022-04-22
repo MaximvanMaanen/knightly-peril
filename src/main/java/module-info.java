@@ -1,9 +1,9 @@
 module waterworld {
     requires hanyaeger;
 
-    exports com.github.hanyaeger.tutorial;
-    exports com.github.hanyaeger.tutorial.entities.map;
-    exports com.github.hanyaeger.tutorial.entities.collectibles;
+    exports com.github.hanyaeger.knightlyperil;
+    exports com.github.hanyaeger.knightlyperil.entities.map;
+    exports com.github.hanyaeger.knightlyperil.entities.collectibles;
 
     opens audio;
     opens backgrounds;
@@ -12,5 +12,5 @@ module waterworld {
     opens sprites.decorations;
     opens sprites.decorations.valuables;
     opens sprites.user_interface;
-    exports com.github.hanyaeger.tutorial.entities.collectibles.ConfigurationModels;
+    exports com.github.hanyaeger.knightlyperil.entities.collectibles.ConfigurationModels;
 }
