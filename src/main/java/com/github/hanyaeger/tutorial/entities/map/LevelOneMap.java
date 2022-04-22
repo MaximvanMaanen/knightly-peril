@@ -1,8 +1,7 @@
 package com.github.hanyaeger.tutorial.entities.map;
 
 import com.github.hanyaeger.api.scenes.TileMap;
-import com.github.hanyaeger.tutorial.entities.pickups.MoneyBag;
-import com.github.hanyaeger.tutorial.entities.pickups.ConfigurationModels.MoneyBagConfigurationModel;
+import com.github.hanyaeger.tutorial.entities.collectibles.MoneyBag;
 
 public class LevelOneMap extends TileMap {
 
@@ -13,7 +12,6 @@ public class LevelOneMap extends TileMap {
         addEntity(3, Floor.class, "sprites/decorations/spikes.png");
         addEntity(4, Floor.class, "sprites/floor/floor_tile_1.png");
         addEntity(5, Floor.class, "sprites/floor/floor_tile_4.png");
-        addEntity(6, Coral.class, "sprites/coral1.png"); // dit word een gem
         addEntity(7, Platform.class, "sprites/decorations/platform_4.png");
         addEntity(8, HealthPotion.class, "sprites/decorations/potion.png");
         addEntity(9, Floor.class, "sprites/floor/blank.png");
@@ -21,7 +19,6 @@ public class LevelOneMap extends TileMap {
         addEntity(11, Floor.class, "sprites/floor/stairs_tile_2.png");
         addEntity(12, Floor.class, "sprites/floor/stairs_tile_3.png");
         addEntity(13, Floor.class, "sprites/floor/stairs_tile_4.png");
-        addEntity(200, MoneyBag.class, "sprites/decorations/valuables/bag_1.png");
         addEntity(200, MoneyBag.class, new MoneyBagConfigurationModel("sprites/decorations/valuables/bag_1.png", 10));
         addEntity(201, MoneyBag.class, new MoneyBagConfigurationModel("sprites/decorations/valuables/bag_2.png", 20));
     }
@@ -34,6 +31,7 @@ public class LevelOneMap extends TileMap {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 200, 201, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},

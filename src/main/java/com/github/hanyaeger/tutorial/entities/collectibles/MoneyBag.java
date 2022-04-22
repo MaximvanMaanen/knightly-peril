@@ -1,12 +1,12 @@
-package com.github.hanyaeger.tutorial.entities.pickups;
+package com.github.hanyaeger.tutorial.entities.collectibles;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
-import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
-import com.github.hanyaeger.api.entities.impl.SpriteEntity;
+import com.github.hanyaeger.tutorial.entities.collectibles.ConfigurationModels.MoneyBagConfigurationModel;
 import com.github.hanyaeger.tutorial.entities.knight.KnightHitbox;
-import com.github.hanyaeger.tutorial.entities.pickups.ConfigurationModels.MoneyBagConfigurationModel;
+
+import java.util.List;
 
 public class MoneyBag extends BaseCollectible {
     private int scoreWorth;
@@ -18,11 +18,13 @@ public class MoneyBag extends BaseCollectible {
     }
 
     @Override
-    public void onCollision(Collider collider) {
-        if(collider instanceof KnightHitbox knightHitbox)
-        {
-            knightHitbox.knight.score.totalScore += this.scoreWorth;
-            super.onCollision(collider);
+    public void onCollision(List<Collider> collidingObjects) {
+        for (Collider collider: collidingObjects) {
+            if(collider instanceof KnightHitbox knightHitbox)
+            {
+                knightHitbox.knight.score.totalScore += this.scoreWorth;
+                super.onCollision(collidingObjects);
+            }
         }
     }
 }

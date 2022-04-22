@@ -1,10 +1,12 @@
-package com.github.hanyaeger.tutorial.entities.pickups;
+package com.github.hanyaeger.tutorial.entities.collectibles;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
+
+import java.util.List;
 
 abstract class BaseCollectible extends SpriteEntity implements Collided
 {
@@ -15,10 +17,10 @@ abstract class BaseCollectible extends SpriteEntity implements Collided
     /**
      * Triggers the collision and removes the child from the memory.
      * @
-     * @param collider
+     * @param collidingObjects
      */
     @Override
-    public void onCollision(Collider collider) {
+    public void onCollision(List<Collider> collidingObjects) {
         this.remove();
     }
 }
