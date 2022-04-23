@@ -4,7 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.knightlyperil.Main;
-import com.github.hanyaeger.knightlyperil.entities.knight.Knight;
+import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.entities.map.LevelOneMap;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
 

@@ -4,13 +4,14 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.knightlyperil.entities.characters.BaseCompositeCharacter;
 import com.github.hanyaeger.knightlyperil.entities.health.Health;
 import com.github.hanyaeger.knightlyperil.entities.score.Score;
 import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
-public class Knight extends DynamicCompositeEntity implements KeyListener {
+public class Knight extends BaseCompositeCharacter implements KeyListener {
     public Health health;
     public Score score;
     private KnightSprite sprite;
