@@ -5,9 +5,9 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.entities.impl.RectangleEntity;
-import com.github.hanyaeger.knightlyperil.entities.map.structures.BaseDynamicStructure;
-import com.github.hanyaeger.knightlyperil.entities.map.structures.BaseStaticStructure;
+import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
 import java.util.List;
 
@@ -26,16 +26,16 @@ public abstract class BaseBody extends RectangleEntity implements Collided {
     @Override
     public void onCollision(List<Collider> collidingObjects) {
         for (Collider collider : collidingObjects) {
-            if (collider instanceof BaseStaticStructure traversable) {
+            if (collider instanceof SpriteEntity traversable) {
                 handleStaticEntityCollision(traversable);
             }
-            else if(collider instanceof BaseDynamicStructure traversable) {
+            else if(collider instanceof DynamicSpriteEntity traversable) {
                 handleDynamicEntityCollision(traversable);
             }
         }
     }
 
-    private void handleStaticEntityCollision(BaseStaticStructure traversable)
+    private void handleStaticEntityCollision(SpriteEntity traversable)
     {
         var traversableBoundingBox = traversable.getBoundingBox();
         var bodyBoundingBox = this.getBoundingBox();
@@ -71,7 +71,7 @@ public abstract class BaseBody extends RectangleEntity implements Collided {
         }
     }
 
-    private void handleDynamicEntityCollision(BaseDynamicStructure traversable)
+    private void handleDynamicEntityCollision(DynamicSpriteEntity traversable)
     {
         var traversableBoundingBox = traversable.getBoundingBox();
         var bodyBoundingBox = this.getBoundingBox();
