@@ -26,7 +26,7 @@ public class KnightHitbox extends RectangleEntity implements Collided, Collider 
 
     @Override
     public void onCollision(List<Collider> collidingObjects) {
-        final int deviancy = 3; // The deviancy is set to 3. This is the lowest the engine seems to reliably handle.
+        final int deviant = 3; // The deviant is set to 3. This is the lowest the engine seems to reliably handle.
 
         for (Collider collider : collidingObjects) {
             if (collider instanceof Floor floor) { // Polymorphisme toepassen op alle Floor objecten. Deze hele check mag daar in.
@@ -35,32 +35,32 @@ public class KnightHitbox extends RectangleEntity implements Collided, Collider 
                 var hitboxBoundingBox = this.getBoundingBox();
 
                 if( // We are above.
-                        (hitboxBoundingBox.getMaxY() - floorBoundingBox.getMinY()) <= deviancy &&
+                        (hitboxBoundingBox.getMaxY() - floorBoundingBox.getMinY()) <= deviant &&
                         (hitboxBoundingBox.getMaxY() - floorBoundingBox.getMinY()) > 0
                 ) {
                     knight.nullifySpeedInDirection(Direction.DOWN);
-                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX(), knightBoundingBox.getMinY() - deviancy));
+                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX(), knightBoundingBox.getMinY() - deviant));
                 }
                  else if( // We are below.
-                        (floorBoundingBox.getMaxY() - hitboxBoundingBox.getMinY()) <= deviancy &&
+                        (floorBoundingBox.getMaxY() - hitboxBoundingBox.getMinY()) <= deviant &&
                         (floorBoundingBox.getMaxY() - hitboxBoundingBox.getMinY()) > 0
                 ) {
                     knight.nullifySpeedInDirection(Direction.UP);
-                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX(), knightBoundingBox.getMinY() + deviancy));
+                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX(), knightBoundingBox.getMinY() + deviant));
                 }
                 else if( // We are coming from the left
-                        ((hitboxBoundingBox.getMaxX() - floorBoundingBox.getMinX())  <= deviancy &&
+                        ((hitboxBoundingBox.getMaxX() - floorBoundingBox.getMinX())  <= deviant &&
                         ((hitboxBoundingBox.getMaxX() - floorBoundingBox.getMinX()) > 0))
                 ) {
                     knight.nullifySpeedInDirection(Direction.RIGHT);
-                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX() - deviancy, knightBoundingBox.getMinY()));
+                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX() - deviant, knightBoundingBox.getMinY()));
                 }
                 else if( // We are coming from the right
-                        ((floorBoundingBox.getMaxX() - hitboxBoundingBox.getMinX()) <= deviancy &&
+                        ((floorBoundingBox.getMaxX() - hitboxBoundingBox.getMinX()) <= deviant &&
                         ((floorBoundingBox.getMaxX() - hitboxBoundingBox.getMinX()) > 0))
                 ) {
                     knight.nullifySpeedInDirection(Direction.LEFT);
-                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX() + deviancy, knightBoundingBox.getMinY()));
+                    knight.setAnchorLocation(new Coordinate2D(knightBoundingBox.getMinX() + deviant, knightBoundingBox.getMinY()));
                 }
             }
         }
