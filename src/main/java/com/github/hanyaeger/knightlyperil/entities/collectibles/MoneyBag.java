@@ -4,7 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.knightlyperil.entities.collectibles.ConfigurationModels.MoneyBagConfigurationModel;
-import com.github.hanyaeger.knightlyperil.entities.knight.KnightHitbox;
+import com.github.hanyaeger.knightlyperil.entities.characters.knight.KnightHitbox;
 
 import java.util.List;
 

@@ -3,7 +3,7 @@ com.github.hanyaeger.knightlyperil
 com.github.hanyaeger.knightlyperil.constants
 com.github.hanyaeger.knightlyperil.entities
 com.github.hanyaeger.knightlyperil.entities.buttons
-com.github.hanyaeger.knightlyperil.entities.knight
+com.github.hanyaeger.knightlyperil.entities.characters.knight
 com.github.hanyaeger.knightlyperil.entities.map
 com.github.hanyaeger.knightlyperil.entities.collectibles
 com.github.hanyaeger.knightlyperil.entities.collectibles.ConfigurationModels

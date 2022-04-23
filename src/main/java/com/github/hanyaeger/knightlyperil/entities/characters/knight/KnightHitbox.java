@@ -1,4 +1,4 @@
-package com.github.hanyaeger.knightlyperil.entities.knight;
+package com.github.hanyaeger.knightlyperil.entities.characters.knight;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collided;

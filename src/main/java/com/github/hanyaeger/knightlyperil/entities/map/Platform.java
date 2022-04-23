@@ -8,7 +8,7 @@ import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
-import com.github.hanyaeger.knightlyperil.entities.knight.KnightHitbox;
+import com.github.hanyaeger.knightlyperil.entities.characters.knight.KnightHitbox;
 
 import java.util.List;
 

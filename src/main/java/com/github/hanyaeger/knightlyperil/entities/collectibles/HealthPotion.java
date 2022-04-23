@@ -4,9 +4,8 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
-import com.github.hanyaeger.knightlyperil.entities.collectibles.BaseCollectible;
-import com.github.hanyaeger.knightlyperil.entities.knight.KnightHitbox;
-import static com.github.hanyaeger.knightlyperil.entities.health.Health.maxTotalHealth;
+import com.github.hanyaeger.knightlyperil.entities.characters.knight.KnightHitbox;
+
 import java.util.List;
 
 public class HealthPotion extends BaseCollectible implements Collided {

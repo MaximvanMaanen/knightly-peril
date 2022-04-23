@@ -6,7 +6,7 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
-import com.github.hanyaeger.knightlyperil.entities.knight.KnightHitbox;
+import com.github.hanyaeger.knightlyperil.entities.characters.knight.KnightHitbox;
 
 import java.util.List;
 
