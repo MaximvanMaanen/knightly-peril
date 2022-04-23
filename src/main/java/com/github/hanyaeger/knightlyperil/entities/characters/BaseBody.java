@@ -4,6 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.Direction;
+import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.BaseDynamicStructure;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.BaseStaticStructure;
@@ -15,9 +16,9 @@ public abstract class BaseBody extends RectangleEntity implements Collided {
      * The deviant is set to 3. This seems to be the lowest number the engine can reliably handle.
      */
     private final int deviant = 3;
-    private BaseCompositeCharacter character;
+    private DynamicCompositeEntity character;
 
-    protected BaseBody(Coordinate2D initialPosition, BaseCompositeCharacter character) {
+    protected BaseBody(Coordinate2D initialPosition, DynamicCompositeEntity character) {
         super(initialPosition);
         this.character = character;
     }
