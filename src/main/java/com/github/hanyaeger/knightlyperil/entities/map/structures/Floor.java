@@ -1,4 +1,4 @@
-package com.github.hanyaeger.knightlyperil.entities.map;
+package com.github.hanyaeger.knightlyperil.entities.map.structures;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;

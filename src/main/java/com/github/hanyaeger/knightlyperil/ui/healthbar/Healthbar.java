@@ -4,7 +4,7 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
-import com.github.hanyaeger.knightlyperil.entities.knight.Knight;
+import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 
 public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private HealthbarBackgroundOne backgroundOne;

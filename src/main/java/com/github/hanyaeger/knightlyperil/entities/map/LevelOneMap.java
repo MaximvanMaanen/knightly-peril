@@ -4,6 +4,8 @@ import com.github.hanyaeger.api.scenes.TileMap;
 import com.github.hanyaeger.knightlyperil.entities.collectibles.ConfigurationModels.MoneyBagConfigurationModel;
 import com.github.hanyaeger.knightlyperil.entities.collectibles.HealthPotion;
 import com.github.hanyaeger.knightlyperil.entities.collectibles.MoneyBag;
+import com.github.hanyaeger.knightlyperil.entities.map.structures.Floor;
+import com.github.hanyaeger.knightlyperil.entities.map.structures.Platform;
 
 public class LevelOneMap extends TileMap {
 
