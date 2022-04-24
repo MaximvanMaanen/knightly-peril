@@ -1,10 +1,9 @@
-package com.github.hanyaeger.knightlyperil.entities.characters.enemy;
+package com.github.hanyaeger.knightlyperil.entities.characters.enemy.skeleton;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
-import com.github.hanyaeger.knightlyperil.entities.characters.knight.KnightHitbox;
 
 public class Skeleton extends DynamicCompositeEntity {
     private DynamicSpriteEntity sprite;
