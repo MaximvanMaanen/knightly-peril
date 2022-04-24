@@ -14,8 +14,8 @@ import java.util.Set;
 public class Knight extends DynamicCompositeEntity implements KeyListener {
     public Health health;
     public Score score;
+    public KnightHitbox hitbox;
     private DynamicSpriteEntity sprite;
-    private KnightHitbox hitbox;
 
     public Knight(Coordinate2D initialLocation) {
         super(initialLocation);
