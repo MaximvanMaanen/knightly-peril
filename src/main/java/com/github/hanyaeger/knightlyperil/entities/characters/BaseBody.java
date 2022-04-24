@@ -12,7 +12,7 @@ public abstract class BaseBody extends RectangleEntity implements Collided {
      * The deviant is set to 3. This seems to be the lowest number the engine can reliably handle.
      */
     private final int deviant = 3;
-    private DynamicCompositeEntity character;
+    public DynamicCompositeEntity character;
 
     protected BaseBody(Coordinate2D initialPosition, DynamicCompositeEntity character) {
         super(initialPosition);
