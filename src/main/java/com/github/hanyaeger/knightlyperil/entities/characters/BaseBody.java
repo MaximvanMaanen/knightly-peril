@@ -23,12 +23,12 @@ public abstract class BaseBody extends RectangleEntity implements Collided {
     public void onCollision(List<Collider> collidingObjects) {
         for (Collider collider : collidingObjects) {
             if (collider instanceof SpriteEntity traversable) {
-                handleStaticEntityCollision(traversable);
+                handleEntityCollision(traversable);
             }
         }
     }
 
-    private void handleStaticEntityCollision(YaegerEntity traversable)
+    private void handleEntityCollision(YaegerEntity traversable)
     {
         var traversableBoundingBox = traversable.getBoundingBox();
         var bodyBoundingBox = this.getBoundingBox();
