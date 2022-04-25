@@ -33,7 +33,7 @@ public class LevelOneScene extends DynamicScene implements TileMapContainer {
     }
 
     private Knight setupKnightEntity() {
-        var knight = new Knight(new Coordinate2D(0, 748));
+        var knight = new Knight(new Coordinate2D(0, 680));
         addEntity(knight);
         return knight;
     }
