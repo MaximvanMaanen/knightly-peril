@@ -12,6 +12,7 @@ module waterworld {
     opens sprites.decorations;
     opens sprites.decorations.valuables;
     opens sprites.user_interface;
+    opens sprites.ceiling;
     exports com.github.hanyaeger.knightlyperil.entities.collectibles.ConfigurationModels;
     exports com.github.hanyaeger.knightlyperil.entities.map.structures;
 }
