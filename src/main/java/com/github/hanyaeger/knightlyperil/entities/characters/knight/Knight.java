@@ -3,6 +3,7 @@ package com.github.hanyaeger.knightlyperil.entities.characters.knight;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
+import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
@@ -17,8 +18,10 @@ import java.util.Set;
 public class Knight extends DynamicCompositeEntity implements KeyListener, SceneBorderCrossingWatcher {
     public Health health;
     public Score score;
-    private KnightSprite sprite;
-    private KnightHitbox hitbox;
+
+    public KnightHitbox hitbox;
+    private DynamicSpriteEntity sprite;
+
     private Main main;
 
     public Knight(Coordinate2D initialLocation, Main main) {
@@ -34,7 +37,7 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
         addEntity(createKnightHitbox());
     }
 
-    private KnightSprite createKnightSprite()
+    private DynamicSpriteEntity createKnightSprite()
     {
         this.sprite = new KnightSprite(
                 new Coordinate2D(0,0),

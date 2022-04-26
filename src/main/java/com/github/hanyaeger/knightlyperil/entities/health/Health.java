@@ -10,6 +10,6 @@ public class Health {
 
     public Health()
     {
-        totalHealth = 1;
+        totalHealth = maxTotalHealth;
     }
 }
