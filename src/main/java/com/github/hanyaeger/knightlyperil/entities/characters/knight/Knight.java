@@ -3,23 +3,29 @@ package com.github.hanyaeger.knightlyperil.entities.characters.knight;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
+import com.github.hanyaeger.api.entities.SceneBorderCrossingWatcher;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.knightlyperil.Main;
+import com.github.hanyaeger.knightlyperil.constants.SceneConstants;
 import com.github.hanyaeger.knightlyperil.entities.health.Health;
 import com.github.hanyaeger.knightlyperil.entities.score.Score;
 import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
-public class Knight extends DynamicCompositeEntity implements KeyListener {
+public class Knight extends DynamicCompositeEntity implements KeyListener, SceneBorderCrossingWatcher {
     public Health health;
     public Score score;
     private KnightSprite sprite;
     private KnightHitbox hitbox;
+    private Main main;
 
-    public Knight(Coordinate2D initialLocation) {
+    public Knight(Coordinate2D initialLocation, Main main) {
         super(initialLocation);
         this.health = new Health();
         this.score = new Score();
+        this.main = main;
     }
 
     @Override
@@ -60,6 +66,15 @@ public class Knight extends DynamicCompositeEntity implements KeyListener {
             setMotion(speed,0d);
         } else if(pressedKeys.isEmpty()){
             setSpeed(0);
+        }
+    }
+
+    @Override
+    public void notifyBoundaryCrossing(SceneBorder border) {
+        if (border == SceneBorder.RIGHT) {
+            main.setActiveScene(SceneConstants.LEVEL_TWO);
+        } else {
+            return;
         }
     }
 }

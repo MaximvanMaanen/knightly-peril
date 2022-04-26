@@ -5,20 +5,20 @@ import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.knightlyperil.Main;
 import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
-import com.github.hanyaeger.knightlyperil.entities.map.LevelOneMap;
+import com.github.hanyaeger.knightlyperil.entities.map.LevelTwoMap;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
 
-public class LevelOneScene extends DynamicScene implements TileMapContainer {
+public class LevelTwoScene extends DynamicScene implements TileMapContainer {
     private Main main;
 
-    public LevelOneScene(Main main)
+    public LevelTwoScene(Main main)
     {
         this.main = main;
     }
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/background-level1.jpg");
+        setBackgroundImage("backgrounds/background-level2.png");
     }
 
     @Override
@@ -29,11 +29,11 @@ public class LevelOneScene extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupTileMaps() {
-        addTileMap(new LevelOneMap());
+        addTileMap(new LevelTwoMap());
     }
 
     private Knight setupKnightEntity() {
-        var knight = new Knight(new Coordinate2D(0, 680), main);
+        var knight = new Knight(new Coordinate2D(-20, 680), main);
         addEntity(knight);
         return knight;
     }
