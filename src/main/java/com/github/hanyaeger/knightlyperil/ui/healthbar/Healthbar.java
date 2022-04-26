@@ -27,12 +27,18 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     }
 
     public void setHealthBarWidth(int health) {
-        if (health == 3) {
-            healthbarRectangle.setWidth(100);
-        } else if (health == 2) {
-            healthbarRectangle.setWidth(66);
-        } else {
-            healthbarRectangle.setWidth(33);
+        switch (health){
+            case 3:
+                healthbarRectangle.setWidth(100);
+                break;
+            case 2:
+                healthbarRectangle.setWidth(66);
+                break;
+            case 1:
+                healthbarRectangle.setWidth(33);
+                break;
+            case 0:
+                healthbarRectangle.setWidth(0);
         }
     }
 

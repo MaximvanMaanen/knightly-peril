@@ -50,6 +50,12 @@ public class KnightEnemyCollisionHandler {
     private final long invincibilityInterval = 3000;
     private long currentTime = 0;
     private void handleDamagingCollision() {
+        handleDamage();
+        handleKnightDeath();
+    }
+
+    private void handleDamage()
+    {
         if(isHitInvincibilityActive == false) {
             currentTime = System.currentTimeMillis();
             this.knight.health.totalHealth--;
@@ -57,6 +63,13 @@ public class KnightEnemyCollisionHandler {
         }
         else if(currentTime <= (System.currentTimeMillis() - invincibilityInterval)) {
             isHitInvincibilityActive = false;
+        }
+    }
+
+    private void handleKnightDeath()
+    {
+        if (this.knight.health.totalHealth <= 0) {
+            // transitie naar game over scherm.
         }
     }
 }
