@@ -8,13 +8,11 @@ import javafx.scene.paint.Color;
 
 public class SkeletonHitbox extends BaseBody implements Collider, IEnemy {
     public Skeleton skeleton;
-    private final int skeletonHitboxWidth = 35;
-    private final int skeletonHitboxHeight = 55;
 
     public SkeletonHitbox(Coordinate2D initialPosition, Skeleton skeleton) {
         super(initialPosition, skeleton);
-        setWidth(skeletonHitboxWidth);
-        setHeight(skeletonHitboxHeight);
+        setWidth(35);
+        setHeight(55);
         setFill(Color.TRANSPARENT);
 
         this.skeleton = skeleton;
