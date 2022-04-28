@@ -7,5 +7,6 @@ import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 public class SkeletonSprite extends DynamicSpriteEntity {
     protected SkeletonSprite(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
         super(resource, initialLocation, size, rows, columns);
+        setAutoCycle(150, -1);
     }
 }

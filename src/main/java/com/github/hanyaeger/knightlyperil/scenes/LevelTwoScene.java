@@ -4,6 +4,8 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.knightlyperil.Main;
+import com.github.hanyaeger.knightlyperil.entities.characters.enemy.mushroom.Mushroom;
+import com.github.hanyaeger.knightlyperil.entities.characters.enemy.skeleton.Skeleton;
 import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.entities.map.LevelTwoMap;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
@@ -25,6 +27,7 @@ public class LevelTwoScene extends DynamicScene implements TileMapContainer {
     public void setupEntities() {
         var knight = setupKnightEntity();
         setupUiEntities(knight);
+        setupEnemyEntities();
     }
 
     @Override
@@ -41,5 +44,10 @@ public class LevelTwoScene extends DynamicScene implements TileMapContainer {
     private void setupUiEntities(Knight knight) {
         var healthbar = new Healthbar(new Coordinate2D(10, 10), knight);
         addEntity(healthbar);
+    }
+
+    private void setupEnemyEntities() {
+        addEntity(new Skeleton(new Coordinate2D(500, 725)));
+        addEntity(new Mushroom(new Coordinate2D(1000, 450)));
     }
 }
