@@ -47,7 +47,7 @@ public class LevelOneScene extends DynamicScene implements TileMapContainer {
     }
 
     private void setupEnemyEntity() {
-        addEntity(new Skeleton(new Coordinate2D(500, 810)));
-        addEntity(new Mushroom(new Coordinate2D(550, 750)));
+        addEntity(new Skeleton(new Coordinate2D(500, 725)));
+        addEntity(new Mushroom(new Coordinate2D(550, 660)));
     }
 }
