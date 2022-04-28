@@ -6,7 +6,6 @@ import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.StaticScene;
 import com.github.hanyaeger.knightlyperil.Main;
 import com.github.hanyaeger.knightlyperil.entities.buttons.BackToMenuButton;
-import com.github.hanyaeger.knightlyperil.entities.buttons.StartButton;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -33,7 +32,7 @@ public class GameOverScene extends StaticScene {
         addEntity(gameOvertext);
 
         var backToMenuButton = new BackToMenuButton(
-                new Coordinate2D(getWidth() * 0.5, getHeight() * 0.3), main);
+                new Coordinate2D(getWidth() * 0.5, getHeight() * 0.6), main);
         addEntity(backToMenuButton);
     }
 }
