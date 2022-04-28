@@ -28,7 +28,7 @@ public class StartButton extends TextEntity implements
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        main.setActiveScene(SceneConstants.GAME_OVER);
+        main.setActiveScene(SceneConstants.LEVEL_ONE);
     }
 
     @Override
