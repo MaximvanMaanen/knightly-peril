@@ -22,7 +22,7 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
     public KnightHitbox hitbox;
     private DynamicSpriteEntity sprite;
 
-    private Main main;
+    public Main main;
 
     public Knight(Coordinate2D initialLocation, Main main) {
         super(initialLocation);
@@ -76,8 +76,6 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
     public void notifyBoundaryCrossing(SceneBorder border) {
         if (border == SceneBorder.RIGHT) {
             main.setActiveScene(SceneConstants.LEVEL_TWO);
-        } else {
-            return;
         }
     }
 }
