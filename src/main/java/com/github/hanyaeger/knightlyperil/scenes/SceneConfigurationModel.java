@@ -2,7 +2,7 @@ package com.github.hanyaeger.knightlyperil.scenes;
 
 import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
-import com.github.hanyaeger.knightlyperil.ui.healthbar.ScoreDisplay;
+import com.github.hanyaeger.knightlyperil.ui.scoredisplay.ScoreDisplay;
 
 /**
  * A configuration model containing the knight, healthbar and score display.
