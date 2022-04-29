@@ -1,5 +1,8 @@
 package com.github.hanyaeger.knightlyperil.entities.health;
 
+/**
+ * This class is used for setting the maximum total health.
+ */
 public class Health {
     public int totalHealth;
 //    public = access modifier
@@ -8,8 +11,10 @@ public class Health {
 //    int = datatype (oftewel een nummer)
     public static final int maxTotalHealth = 3;
 
-    public Health()
-    {
+    /**
+     * Create a new class to set and keep track of the total health.
+     */
+    public Health() {
         totalHealth = maxTotalHealth;
     }
 }

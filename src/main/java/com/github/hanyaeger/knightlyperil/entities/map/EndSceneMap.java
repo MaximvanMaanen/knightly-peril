@@ -1,13 +1,13 @@
 package com.github.hanyaeger.knightlyperil.entities.map;
 
 import com.github.hanyaeger.api.scenes.TileMap;
-import com.github.hanyaeger.knightlyperil.entities.collectibles.ConfigurationModels.MoneyBagConfigurationModel;
-import com.github.hanyaeger.knightlyperil.entities.collectibles.HealthPotion;
-import com.github.hanyaeger.knightlyperil.entities.collectibles.MoneyBag;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Decorations;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Floor;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Stairs;
 
+/**
+ * This class defines the tilemap of the end scene.
+ */
 public class EndSceneMap extends TileMap {
 
     @Override
