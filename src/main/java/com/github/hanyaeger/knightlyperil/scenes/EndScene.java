@@ -17,15 +17,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class EndScene extends DynamicScene implements TileMapContainer {
-    private Main main;
-    private Score score;
-    private Health health;
+    private final Main main;
+    private final SceneConfigurationModel model;
 
-    public EndScene(Main main)
+    public EndScene(Main main, SceneConfigurationModel model)
     {
         this.main = main;
-        this.score = new Score();
-        this.health = new Health();
+        this.model = model;
     }
 
     @Override
@@ -35,8 +33,10 @@ public class EndScene extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupEntities() {
-        var knight = setupKnightEntity();
-        setupUiEntities(knight);
+        addEntity(this.model.knight);
+        addEntity(this.model.healthbar);
+        addEntity(this.model.scoreDisplay);
+
         setupKingEntity();
         setupEndText();
         setupButton();
@@ -45,17 +45,6 @@ public class EndScene extends DynamicScene implements TileMapContainer {
     @Override
     public void setupTileMaps() {
         addTileMap(new EndSceneMap());
-    }
-
-    private Knight setupKnightEntity() {
-        var knight = new Knight(new Coordinate2D(-40, 385), main);
-        addEntity(knight);
-        return knight;
-    }
-
-    private void setupUiEntities(Knight knight) {
-        var healthbar = new Healthbar(new Coordinate2D(10, 10), knight);
-        addEntity(healthbar);
     }
 
     private void setupKingEntity() {
@@ -76,7 +65,7 @@ public class EndScene extends DynamicScene implements TileMapContainer {
 
         var scoreAndLivesText = new TextEntity(
                 new Coordinate2D(getWidth() / 20 * 16, getHeight() / 17 * 8),
-                "Score: " + score.totalScore + "\r\n" + "Lives: " + health.totalHealth );
+                "Score: " + this.model.knight.score.totalScore + "\r\n" + "Lives: " + this.model.knight.health.totalHealth );
         scoreAndLivesText.setFont(Font.font(18));
         scoreAndLivesText.setFill(Color.WHITE);
         addEntity(scoreAndLivesText);

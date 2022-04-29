@@ -12,10 +12,12 @@ import javafx.scene.text.FontWeight;
 
 public class GameOverScene extends StaticScene {
     private Main main;
+    private final SceneConfigurationModel model;
 
-    public GameOverScene(Main main)
+    public GameOverScene(Main main, SceneConfigurationModel model)
     {
         this.main = main;
+        this.model = model;
     }
 
     @Override
@@ -30,6 +32,13 @@ public class GameOverScene extends StaticScene {
         gameOvertext.setFill(Color.WHITE);
         gameOvertext.setFont(Font.font("Roboto", FontWeight.BOLD, 100));
         addEntity(gameOvertext);
+
+        var finalScoreText = new TextEntity(new Coordinate2D(getWidth() * 0.5, getHeight() * 0.2),
+                "Final score: " + model.knight.score.totalScore);
+        finalScoreText.setAnchorPoint(AnchorPoint.BOTTOM_CENTER);
+        finalScoreText.setFill(Color.WHITE);
+        finalScoreText.setFont(Font.font("Roboto", FontWeight.BOLD, 32));
+        addEntity(finalScoreText);
 
         var backToMenuButton = new BackToMenuButton(
                 new Coordinate2D(getWidth() * 0.5 - 100, getHeight() * 0.5), main);

@@ -1,29 +1,18 @@
 package com.github.hanyaeger.knightlyperil.scenes;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.UpdateExposer;
-import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
-import com.github.hanyaeger.knightlyperil.Main;
 import com.github.hanyaeger.knightlyperil.entities.characters.enemy.mushroom.Mushroom;
 import com.github.hanyaeger.knightlyperil.entities.characters.enemy.skeleton.Skeleton;
-import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.entities.map.LevelOneMap;
-import com.github.hanyaeger.knightlyperil.entities.score.Score;
-import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
-import com.github.hanyaeger.knightlyperil.ui.healthbar.ScoreDisplay;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 
 public class LevelOneScene extends DynamicScene implements TileMapContainer {
-    private final Main main;
-    private final Score score;
+    private final SceneConfigurationModel model;
 
-    public LevelOneScene(Main main)
+    public LevelOneScene(SceneConfigurationModel model)
     {
-        this.main = main;
-        this.score = new Score();
+        this.model = model;
     }
 
     @Override
@@ -33,30 +22,15 @@ public class LevelOneScene extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupEntities() {
-        var knight = setupKnightEntity();
-        setupUiEntities(knight);
+        addEntity(this.model.knight);
+        addEntity(this.model.healthbar);
+        addEntity(this.model.scoreDisplay);
         setupEnemyEntity();
     }
 
     @Override
     public void setupTileMaps() {
         addTileMap(new LevelOneMap());
-    }
-
-    private Knight setupKnightEntity() {
-        var knight = new Knight(
-                new Coordinate2D(0, getHeight() / 17 * 15 - 130),
-                main);
-        addEntity(knight);
-        return knight;
-    }
-
-    private void setupUiEntities(Knight knight) {
-        score.setupScoreText();
-        var healthbar = new Healthbar(new Coordinate2D(10, 10), knight);
-        var scoreDisplay = new ScoreDisplay(new Coordinate2D((this.getWidth() - 200), 10), knight);
-        addEntity(healthbar);
-        addEntity(scoreDisplay);
     }
 
     private void setupEnemyEntity() {

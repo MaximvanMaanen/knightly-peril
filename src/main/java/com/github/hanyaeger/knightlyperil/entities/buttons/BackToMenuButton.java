@@ -25,6 +25,7 @@ public class BackToMenuButton extends TextEntity implements MouseButtonPressedLi
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
+        main.setupScenes();
         main.setActiveScene(SceneConstants.MAIN_MENU);
     }
 
