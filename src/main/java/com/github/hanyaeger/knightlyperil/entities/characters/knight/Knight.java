@@ -20,13 +20,13 @@ import java.util.Set;
  * This class binds the knight hitbox and sprite with each other.
  */
 public class Knight extends DynamicCompositeEntity implements KeyListener, SceneBorderCrossingWatcher {
-    public Health health;
-    public Score score;
+    public Health health; // <- heap
+    public Score score; // <- heap
 
-    public KnightHitbox hitbox;
-    private DynamicSpriteEntity sprite;
+    public KnightHitbox hitbox; // <- stack
+    private DynamicSpriteEntity sprite; // <- stack
 
-    public Main main;
+    public Main main; // <- heap
 
     /**
      * Create a new {@code DynamicCompositeEntity} on the given {@code initialLocation}.
@@ -34,7 +34,7 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
      * @param initialLocation the initial position at which this {@link DynamicCompositeEntity} should be placed.
      * @param main the main class is given trough because of needing to set the active scene.
      */
-    public Knight(Coordinate2D initialLocation, Main main) {
+    public Knight(Coordinate2D initialLocation, Main main) { // <- stack
         super(initialLocation);
         this.health = new Health();
         this.score = new Score();
@@ -42,12 +42,12 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
     }
 
     @Override
-    protected void setupEntities() {
+    protected void setupEntities() { // <- heap
         addEntity(createKnightSprite());
         addEntity(createKnightHitbox());
     }
 
-    private DynamicSpriteEntity createKnightSprite()
+    private DynamicSpriteEntity createKnightSprite() // <- stack
     {
         this.sprite = new KnightSprite(
                 new Coordinate2D(0,0),
@@ -57,7 +57,7 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
         return this.sprite;
     }
 
-    private KnightHitbox createKnightHitbox()
+    private KnightHitbox createKnightHitbox() // <- stack
     {
         this.hitbox = new KnightHitbox(
                 new Coordinate2D(75, 70),
@@ -67,7 +67,7 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
     }
 
     @Override
-    public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
+    public void onPressedKeysChange(Set<KeyCode> pressedKeys) { // <- heap
         int speed = 3;
         if(pressedKeys.contains(KeyCode.LEFT)){
             setMotion(speed,270d);
@@ -83,7 +83,7 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
     }
 
     @Override
-    public void notifyBoundaryCrossing(SceneBorder border) {
+    public void notifyBoundaryCrossing(SceneBorder border) { // <- heap
         if (border == SceneBorder.RIGHT) {
             main.setActiveScene(SceneConstants.LEVEL_TWO);
         }
