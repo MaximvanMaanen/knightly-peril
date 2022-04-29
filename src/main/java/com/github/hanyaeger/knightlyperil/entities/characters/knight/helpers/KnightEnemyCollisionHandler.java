@@ -8,13 +8,26 @@ import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 
 import java.util.List;
 
+/**
+ * This class is used for handling the collision between knight and enemy.
+ */
 public class KnightEnemyCollisionHandler {
     public Knight knight;
 
+    /**
+     * Instantiate the knight.
+     *
+     * @param knight the knight which we need to use.
+     */
     public KnightEnemyCollisionHandler(Knight knight) {
         this.knight = knight;
     }
 
+    /**
+     * Handles the collision for knight and enemy.
+     *
+     * @param collidingObjects a {@code List} of all instances of Collider this Collided has collided with, during the last Game World Update.
+     */
     public void handleEnemyCollision(List<Collider> collidingObjects) {
         for (Collider collider : collidingObjects) {
             if(collider instanceof IEnemy enemy)

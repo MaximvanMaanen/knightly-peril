@@ -6,6 +6,10 @@ import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 
+/**
+ * This class creates the healthbar. It binds the two backgrounds and the healthbar itself.
+ * It also defines the width of the healthbar.
+ */
 public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private HealthbarBackgroundOne backgroundOne;
     private HealthbarRectangle healthbarRectangle;
@@ -14,6 +18,12 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private final int maxHealthbarWidth = 100;
     private final int maxHealthbarHeight = 7;
 
+    /**
+     * Create a new {@code DynamicCompositeEntity} with the given {@code initialLocation}.
+     *
+     * @param initialLocation the initial position at which this {@link DynamicCompositeEntity} should be placed.
+     * @param knight the knight is given trough because of needing to keep track of total health of the knight.
+     */
     public Healthbar(Coordinate2D initialLocation, Knight knight){
         super(initialLocation);
         this.knight = knight;
@@ -26,7 +36,7 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
         addEntity(createHealthbarBackgroundTwo());
     }
 
-    public void setHealthBarWidth(int health) {
+    private void setHealthBarWidth(int health) {
         switch (health){
             case 3:
                 healthbarRectangle.setWidth(100);

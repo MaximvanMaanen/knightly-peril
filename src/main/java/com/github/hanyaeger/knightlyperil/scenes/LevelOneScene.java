@@ -7,6 +7,9 @@ import com.github.hanyaeger.knightlyperil.entities.characters.enemy.mushroom.Mus
 import com.github.hanyaeger.knightlyperil.entities.characters.enemy.skeleton.Skeleton;
 import com.github.hanyaeger.knightlyperil.entities.map.LevelOneMap;
 
+/**
+ * This class creates the scene for level one.
+ */
 public class LevelOneScene extends DynamicScene implements TileMapContainer {
     private final SceneConfigurationModel model;
 

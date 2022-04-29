@@ -1,5 +1,8 @@
 package com.github.hanyaeger.knightlyperil.constants;
 
+/**
+ * Instantiate all possible scenes with a scene name.
+ */
 public class SceneConstants {
     public static final int MAIN_MENU = 1;
     public static final int END_SCREEN = 2;

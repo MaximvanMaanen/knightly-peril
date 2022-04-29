@@ -10,11 +10,18 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+/**
+ * This class creates the scene for the main menu.
+ */
 public class MainMenuScene extends StaticScene {
     private Main main;
 
-    public MainMenuScene(Main main)
-    {
+    /**
+     * Create a new {@code DynamicScene}.
+     *
+     * @param main the main class is given trough because of needing to set the active scene in the {@code startButton}.
+     */
+    public MainMenuScene(Main main) {
         this.main = main;
     }
 
