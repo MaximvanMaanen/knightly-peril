@@ -82,10 +82,19 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
         }
     }
 
+    /**
+     * Attempts to set the player to the next level. Unfortunately, it is not possible to get the active scene.
+     * Therefore, it is not possible to determine which scene should come next.
+     * This can be fixed by implementing separate entities that load a scene based on entering it.
+     * However, time constraints demanded we take this approach instead.
+     * @param border
+     */
     @Override
     public void notifyBoundaryCrossing(SceneBorder border) {
         if (border == SceneBorder.RIGHT) {
+            this.setAnchorLocation(new Coordinate2D(0, 900 / 17 * 15 - 130));
             main.setActiveScene(SceneConstants.LEVEL_TWO);
+
         }
     }
 }
