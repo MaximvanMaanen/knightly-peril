@@ -32,7 +32,7 @@ public class GameOverScene extends StaticScene {
         addEntity(gameOvertext);
 
         var backToMenuButton = new BackToMenuButton(
-                new Coordinate2D(getWidth() * 0.5, getHeight() * 0.6), main);
+                new Coordinate2D(getWidth() * 0.5 - 100, getHeight() * 0.5), main);
         addEntity(backToMenuButton);
     }
 }

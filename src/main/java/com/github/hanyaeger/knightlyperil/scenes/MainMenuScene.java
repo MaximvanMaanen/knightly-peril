@@ -34,7 +34,7 @@ public class MainMenuScene extends StaticScene {
         addEntity(mainMenuText);
 
         var startButton = new StartButton(
-                new Coordinate2D(getWidth() * 0.5, getHeight() * 0.3),
+                new Coordinate2D(getWidth() * 0.5 - 120, getHeight() * 0.2 + 50),
                 main);
         addEntity(startButton);
     }

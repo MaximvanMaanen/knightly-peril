@@ -21,7 +21,7 @@ public class StartButton extends TextEntity implements
 
     public StartButton(Coordinate2D initialLocation, Main main){
         super(initialLocation,"Adventure Awaits!");
-        setFill(Color.PURPLE);
+        setFill(Color.WHITE);
         setFont(Font.font("Roboto", FontWeight.BOLD, 30));
         this.main = main;
     }
@@ -33,13 +33,13 @@ public class StartButton extends TextEntity implements
 
     @Override
     public void onMouseEntered() {
-        setFill(Color.VIOLET);
+        setFill(Color.LIGHTGRAY);
         setCursor(Cursor.HAND);
     }
 
     @Override
     public void onMouseExited() {
-        setFill(Color.PURPLE);
+        setFill(Color.WHITE);
         setCursor(Cursor.DEFAULT);
     }
 }
