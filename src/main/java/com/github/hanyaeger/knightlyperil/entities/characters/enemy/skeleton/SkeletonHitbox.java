@@ -9,6 +9,12 @@ import javafx.scene.paint.Color;
 public class SkeletonHitbox extends BaseBody implements Collider, IEnemy {
     public Skeleton skeleton;
 
+    /**
+     * Create a new {@code BaseBody} on the given {@code initialPosition}.
+     *
+     * @param initialPosition the initial position at which this {@link BaseBody} should be placed.
+     * @param skeleton the class who needs the {@link BaseBody}.
+     */
     public SkeletonHitbox(Coordinate2D initialPosition, Skeleton skeleton) {
         super(initialPosition, skeleton);
         setWidth(35);

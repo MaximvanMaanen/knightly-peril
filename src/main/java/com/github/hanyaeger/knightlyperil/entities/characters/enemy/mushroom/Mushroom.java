@@ -12,7 +12,7 @@ public class Mushroom extends DynamicCompositeEntity {
     /**
      * Create a new {@code DynamicCompositeEntity} on the given {@code initialLocation}.
      *
-     * @param initialLocation the initial position at which this {@link DynamicCompositeEntity} should be placed
+     * @param initialLocation the initial position at which this {@link DynamicCompositeEntity} should be placed.
      */
     public Mushroom(Coordinate2D initialLocation) {
         super(initialLocation);

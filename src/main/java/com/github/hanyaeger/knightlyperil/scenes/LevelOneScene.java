@@ -13,8 +13,12 @@ import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
 public class LevelOneScene extends DynamicScene implements TileMapContainer {
     private Main main;
 
-    public LevelOneScene(Main main)
-    {
+    /**
+     * Create a new {@code DynamicScene}.
+     *
+     * @param main the main class is given trough because of needing to set the active scene in the {@code Knight}.
+     */
+    public LevelOneScene(Main main) {
         this.main = main;
     }
 

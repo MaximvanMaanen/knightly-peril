@@ -19,6 +19,12 @@ public class StartButton extends TextEntity implements
         MouseExitListener {
     private Main main;
 
+    /**
+     * Create a new {@code TextEntity} with given location and Main class.
+     *
+     * @param initialLocation the initial position at which this {@link TextEntity} should be placed.
+     * @param main the main class is given trough because of needing to set the active scene.
+     */
     public StartButton(Coordinate2D initialLocation, Main main){
         super(initialLocation,"Adventure Awaits!");
         setFill(Color.PURPLE);

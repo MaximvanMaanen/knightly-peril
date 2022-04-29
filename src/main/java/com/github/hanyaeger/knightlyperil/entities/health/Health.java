@@ -8,8 +8,10 @@ public class Health {
 //    int = datatype (oftewel een nummer)
     public static final int maxTotalHealth = 3;
 
-    public Health()
-    {
+    /**
+     * Create a new class to set and keep track of the total health.
+     */
+    public Health() {
         totalHealth = maxTotalHealth;
     }
 }

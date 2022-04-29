@@ -13,6 +13,11 @@ import javafx.scene.text.FontWeight;
 public class GameOverScene extends StaticScene {
     private Main main;
 
+    /**
+     * Create a new {@code DynamicScene}.
+     *
+     * @param main the main class is given trough because of needing to set the active scene in the {@code backToMenuButton}.
+     */
     public GameOverScene(Main main)
     {
         this.main = main;

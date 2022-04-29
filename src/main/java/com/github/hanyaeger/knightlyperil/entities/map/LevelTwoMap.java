@@ -6,7 +6,6 @@ import com.github.hanyaeger.knightlyperil.entities.collectibles.HealthPotion;
 import com.github.hanyaeger.knightlyperil.entities.collectibles.MoneyBag;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Decorations;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Floor;
-import com.github.hanyaeger.knightlyperil.entities.map.structures.Platform;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Stairs;
 
 public class LevelTwoMap extends TileMap {

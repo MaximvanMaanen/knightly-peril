@@ -6,6 +6,11 @@ import com.github.hanyaeger.knightlyperil.constants.SceneConstants;
 import com.github.hanyaeger.knightlyperil.scenes.*;
 
 public class Main extends YaegerGame {
+    /**
+     * Create a new {@code YaegerGame}.
+     *
+     * @param args program variable from the build configuration.
+     */
     public static void main(String[] args) {
         launch(args);
     }

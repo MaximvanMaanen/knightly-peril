@@ -1,6 +1,7 @@
 package com.github.hanyaeger.knightlyperil.entities.buttons;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
 import com.github.hanyaeger.api.userinput.MouseEnterListener;
@@ -16,12 +17,18 @@ import javafx.scene.text.FontWeight;
 public class BackToMenuButton extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
     private Main main;
 
+    /**
+     * Create a new {@code TextEntity} with given location and Main class.
+     *
+     * @param initialLocation the initial position at which this {@link TextEntity} should be placed.
+     * @param main the main class is given trough because of needing to set the active scene.
+     */
     public BackToMenuButton(Coordinate2D initialLocation, Main main) {
-            super(initialLocation, "Back to main menu!");
-            setFill(Color.WHITE);
-            setFont(Font.font("Roboto", FontWeight.BOLD, 20));
-            this.main = main;
-        }
+        super(initialLocation, "Back to main menu!");
+        setFill(Color.WHITE);
+        setFont(Font.font("Roboto", FontWeight.BOLD, 20));
+        this.main = main;
+    }
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {

@@ -24,6 +24,12 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
 
     public Main main;
 
+    /**
+     * Create a new {@code DynamicCompositeEntity} on the given {@code initialLocation}.
+     *
+     * @param initialLocation the initial position at which this {@link DynamicCompositeEntity} should be placed.
+     * @param main the main class is given trough because of needing to set the active scene.
+     */
     public Knight(Coordinate2D initialLocation, Main main) {
         super(initialLocation);
         this.health = new Health();

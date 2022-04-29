@@ -21,6 +21,11 @@ public class EndScene extends DynamicScene implements TileMapContainer {
     private Score score;
     private Health health;
 
+    /**
+     * Create a new {@code DynamicScene}.
+     *
+     * @param main the main class is given trough because of needing to set the active scene in the {@code Knight} and {@code backToMenuButton}.
+     */
     public EndScene(Main main)
     {
         this.main = main;

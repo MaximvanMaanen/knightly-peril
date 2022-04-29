@@ -14,6 +14,12 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private final int maxHealthbarWidth = 100;
     private final int maxHealthbarHeight = 7;
 
+    /**
+     * Create a new {@code DynamicCompositeEntity} with the given {@code initialLocation}.
+     *
+     * @param initialLocation the initial position at which this {@link DynamicCompositeEntity} should be placed.
+     * @param knight the knight is given trough because of needing to keep track of total health of the knight.
+     */
     public Healthbar(Coordinate2D initialLocation, Knight knight){
         super(initialLocation);
         this.knight = knight;
@@ -26,7 +32,7 @@ public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
         addEntity(createHealthbarBackgroundTwo());
     }
 
-    public void setHealthBarWidth(int health) {
+    private void setHealthBarWidth(int health) {
         switch (health){
             case 3:
                 healthbarRectangle.setWidth(100);

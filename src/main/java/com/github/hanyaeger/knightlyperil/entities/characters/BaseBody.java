@@ -14,6 +14,12 @@ public abstract class BaseBody extends RectangleEntity implements Collided {
     private final int deviant = 3;
     public DynamicCompositeEntity character;
 
+    /**
+     * Create a new {@code RectangleEntity} with a {@code DynamicCompositeEntity} on the given {@code initialPosition}.
+     *
+     * @param initialPosition the initial position at which this {@link RectangleEntity} should be placed.
+     * @param character the {@code DynamicCompositeEntity} that will be used for collision.
+     */
     protected BaseBody(Coordinate2D initialPosition, DynamicCompositeEntity character) {
         super(initialPosition);
         this.character = character;
