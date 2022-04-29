@@ -9,6 +9,7 @@ import com.github.hanyaeger.knightlyperil.entities.characters.enemy.skeleton.Ske
 import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.entities.map.LevelTwoMap;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
+import com.github.hanyaeger.knightlyperil.ui.healthbar.ScoreDisplay;
 
 public class LevelTwoScene extends DynamicScene implements TileMapContainer {
     private Main main;
@@ -43,7 +44,9 @@ public class LevelTwoScene extends DynamicScene implements TileMapContainer {
 
     private void setupUiEntities(Knight knight) {
         var healthbar = new Healthbar(new Coordinate2D(10, 10), knight);
+        var scoreDisplay = new ScoreDisplay(new Coordinate2D((this.getWidth() - 200), 10), knight);
         addEntity(healthbar);
+        addEntity(scoreDisplay);
     }
 
     private void setupEnemyEntities() {

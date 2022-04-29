@@ -12,12 +12,13 @@ import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.entities.map.LevelOneMap;
 import com.github.hanyaeger.knightlyperil.entities.score.Score;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
+import com.github.hanyaeger.knightlyperil.ui.healthbar.ScoreDisplay;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-public class LevelOneScene extends DynamicScene implements TileMapContainer, UpdateExposer {
-    private Main main;
-    private Score score;
+public class LevelOneScene extends DynamicScene implements TileMapContainer {
+    private final Main main;
+    private final Score score;
 
     public LevelOneScene(Main main)
     {
@@ -53,16 +54,13 @@ public class LevelOneScene extends DynamicScene implements TileMapContainer, Upd
     private void setupUiEntities(Knight knight) {
         score.setupScoreText();
         var healthbar = new Healthbar(new Coordinate2D(10, 10), knight);
+        var scoreDisplay = new ScoreDisplay(new Coordinate2D((this.getWidth() - 200), 10), knight);
         addEntity(healthbar);
+        addEntity(scoreDisplay);
     }
 
     private void setupEnemyEntity() {
         addEntity(new Skeleton(new Coordinate2D(500, 725)));
         addEntity(new Mushroom(new Coordinate2D(550, 660)));
-    }
-
-    @Override
-    public void explicitUpdate(long l) {
-
     }
 }
