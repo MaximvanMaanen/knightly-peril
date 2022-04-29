@@ -7,7 +7,7 @@ import com.github.hanyaeger.knightlyperil.constants.SceneConstants;
 import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.scenes.*;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
-import com.github.hanyaeger.knightlyperil.ui.healthbar.ScoreDisplay;
+import com.github.hanyaeger.knightlyperil.ui.scoredisplay.ScoreDisplay;
 
 public class Main extends YaegerGame {
     public static void main(String[] args) {
@@ -37,7 +37,7 @@ public class Main extends YaegerGame {
         return new SceneConfigurationModel(
                 knight,
                 new Healthbar(new Coordinate2D(10, 10), knight),
-                new ScoreDisplay(new Coordinate2D((1600 - 200), 10), knight)
+                new ScoreDisplay(new Coordinate2D((1500), 10), knight)
         );
     }
 }

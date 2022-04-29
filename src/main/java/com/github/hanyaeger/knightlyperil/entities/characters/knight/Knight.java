@@ -84,7 +84,6 @@ public class Knight extends DynamicCompositeEntity implements KeyListener, Scene
         if (border == SceneBorder.RIGHT) {
             this.setAnchorLocation(new Coordinate2D(0, 900 / 17 * 15 - 130));
             main.setActiveScene(SceneConstants.LEVEL_TWO);
-
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.github.hanyaeger.knightlyperil.ui.healthbar;
+package com.github.hanyaeger.knightlyperil.ui.scoredisplay;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.UpdateExposer;
@@ -14,7 +14,7 @@ public class ScoreDisplay extends DynamicTextEntity implements UpdateExposer {
     public ScoreDisplay(Coordinate2D initialLocation, Knight knight) {
         super(initialLocation);
         this.setFont(Font.font("Verdana", 20));
-        this.setFill(Color.PURPLE);
+        this.setFill(Color.WHITE);
         this.knight = knight;
     }
 
