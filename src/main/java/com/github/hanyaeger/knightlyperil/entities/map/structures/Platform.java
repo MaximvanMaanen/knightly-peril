@@ -7,6 +7,9 @@ import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
+/**
+ * This class is used for setting the platform images in a map.
+ */
 public class Platform extends DynamicSpriteEntity implements Collider {
     /**
      * Create a new {@code DynamicSpriteEntity}.

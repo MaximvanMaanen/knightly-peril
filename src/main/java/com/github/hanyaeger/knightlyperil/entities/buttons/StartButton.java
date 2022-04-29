@@ -13,6 +13,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+/**
+ * This is a text entity used for starting the game (going to level one).
+ */
 public class StartButton extends TextEntity implements
         MouseButtonPressedListener,
         MouseEnterListener,
@@ -23,7 +26,7 @@ public class StartButton extends TextEntity implements
      * Create a new {@code TextEntity} with given location and Main class.
      *
      * @param initialLocation the initial position at which this {@link TextEntity} should be placed.
-     * @param main the main class is given trough because of needing to set the active scene.
+     * @param main the main class is passed through because of needing to set the active scene.
      */
     public StartButton(Coordinate2D initialLocation, Main main){
         super(initialLocation,"Adventure Awaits!");

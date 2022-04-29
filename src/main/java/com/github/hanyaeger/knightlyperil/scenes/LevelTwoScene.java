@@ -10,6 +10,9 @@ import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 import com.github.hanyaeger.knightlyperil.entities.map.LevelTwoMap;
 import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
 
+/**
+ * This class creates the scene for level two.
+ */
 public class LevelTwoScene extends DynamicScene implements TileMapContainer {
     private Main main;
 

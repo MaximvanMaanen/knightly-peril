@@ -4,6 +4,9 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
+/**
+ * This is a sprite entity used for the endscreen.
+ */
 public class King extends SpriteEntity {
     /**
      * Create a new king {@code SpriteEntity}.

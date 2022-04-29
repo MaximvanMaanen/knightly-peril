@@ -5,6 +5,9 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 
+/**
+ * This is a dynamic composite entity used as an enemy against the knight. This class binds the mushroom hitbox and sprite with each other.
+ */
 public class Mushroom extends DynamicCompositeEntity {
     private DynamicSpriteEntity sprite;
     private MushroomHitbox hitbox;

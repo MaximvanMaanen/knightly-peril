@@ -5,6 +5,9 @@ import com.github.hanyaeger.api.YaegerGame;
 import com.github.hanyaeger.knightlyperil.constants.SceneConstants;
 import com.github.hanyaeger.knightlyperil.scenes.*;
 
+/**
+ * This class is used for making a yeager game.
+ */
 public class Main extends YaegerGame {
     /**
      * Create a new {@code YaegerGame}.

@@ -15,6 +15,10 @@ import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
+/**
+ * This is a dynamic composite entity used as the main character of the game.
+ * This class binds the knight hitbox and sprite with each other.
+ */
 public class Knight extends DynamicCompositeEntity implements KeyListener, SceneBorderCrossingWatcher {
     public Health health;
     public Score score;

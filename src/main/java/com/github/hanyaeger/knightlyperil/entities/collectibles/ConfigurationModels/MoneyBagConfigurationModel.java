@@ -1,5 +1,8 @@
 package com.github.hanyaeger.knightlyperil.entities.collectibles.ConfigurationModels;
 
+/**
+ * This class is used for setting the sprite and score for the moneybag class.
+ */
 public class MoneyBagConfigurationModel {
     public final String moneyBagSprite;
     public int scoreWorth;

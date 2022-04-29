@@ -7,6 +7,9 @@ import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
 import java.util.List;
 
+/**
+ * This class is used for handling the collision between characters and colliders.
+ */
 public abstract class BaseBody extends RectangleEntity implements Collided {
     /**
      * The deviant is set to 3. This seems to be the lowest number the engine can reliably handle.

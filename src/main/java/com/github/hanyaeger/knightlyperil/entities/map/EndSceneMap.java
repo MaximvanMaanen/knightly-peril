@@ -5,6 +5,9 @@ import com.github.hanyaeger.knightlyperil.entities.map.structures.Decorations;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Floor;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Stairs;
 
+/**
+ * This class defines the tilemap of the end scene.
+ */
 public class EndSceneMap extends TileMap {
 
     @Override

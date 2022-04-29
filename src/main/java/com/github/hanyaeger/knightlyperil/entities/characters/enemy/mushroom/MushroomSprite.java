@@ -5,6 +5,9 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 
+/**
+ * This is the image for the mushroom enemy.
+ */
 public class MushroomSprite extends DynamicSpriteEntity {
     /**
      * Create a new {@code DynamicSpriteEntity}.

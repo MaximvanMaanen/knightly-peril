@@ -16,6 +16,9 @@ import com.github.hanyaeger.knightlyperil.ui.healthbar.Healthbar;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
+/**
+ * This class creates the end scene.
+ */
 public class EndScene extends DynamicScene implements TileMapContainer {
     private Main main;
     private Score score;

@@ -8,6 +8,10 @@ import com.github.hanyaeger.knightlyperil.entities.characters.knight.KnightHitbo
 
 import java.util.List;
 
+/**
+ * This class is a moneybag used for the knight to pick up. The moneybag will give a certain amount of score.
+ * This class binds the moneybag sprite and score worth with each other.
+ */
 public class MoneyBag extends BaseCollectible {
     private int scoreWorth;
 

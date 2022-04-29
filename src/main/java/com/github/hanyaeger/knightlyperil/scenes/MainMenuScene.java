@@ -10,6 +10,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+/**
+ * This class creates the scene for the main menu.
+ */
 public class MainMenuScene extends StaticScene {
     private Main main;
 

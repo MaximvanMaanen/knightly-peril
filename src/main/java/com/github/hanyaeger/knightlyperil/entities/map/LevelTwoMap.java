@@ -8,6 +8,9 @@ import com.github.hanyaeger.knightlyperil.entities.map.structures.Decorations;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Floor;
 import com.github.hanyaeger.knightlyperil.entities.map.structures.Stairs;
 
+/**
+ * This class defines the tilemap of the level two.
+ */
 public class LevelTwoMap extends TileMap {
 
     @Override

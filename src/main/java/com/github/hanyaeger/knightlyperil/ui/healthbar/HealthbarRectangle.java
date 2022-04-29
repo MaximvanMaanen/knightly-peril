@@ -6,6 +6,9 @@ import com.github.hanyaeger.api.entities.impl.RectangleEntity;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 import javafx.scene.paint.Color;
 
+/**
+ * This is the healthbar itself, which can be different widths defined by the health of the player.
+ */
 public class HealthbarRectangle extends RectangleEntity {
     /**
      * Create a new {@code RectangleEntity} on the given {@code location}.

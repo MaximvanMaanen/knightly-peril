@@ -6,6 +6,9 @@ import com.github.hanyaeger.knightlyperil.entities.characters.BaseBody;
 import com.github.hanyaeger.knightlyperil.entities.characters.enemy.IEnemy;
 import javafx.scene.paint.Color;
 
+/**
+ * This is the hitbox of the skeleton enemy. The hitbox is used for collision.
+ */
 public class SkeletonHitbox extends BaseBody implements Collider, IEnemy {
     public Skeleton skeleton;
 

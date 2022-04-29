@@ -9,6 +9,9 @@ import javafx.scene.paint.Color;
 
 import java.util.List;
 
+/**
+ * This is the hitbox of the knight. The hitbox is used for collision.
+ */
 public class KnightHitbox extends BaseBody implements Collided, Collider {
     public Knight knight;
     private final int knightHitboxWidth = 35;

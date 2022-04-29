@@ -6,6 +6,10 @@ import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 
+/**
+ * This class creates the healthbar. It binds the two backgrounds and the healthbar itself.
+ * It also defines the width of the healthbar.
+ */
 public class Healthbar extends DynamicCompositeEntity implements UpdateExposer {
     private HealthbarBackgroundOne backgroundOne;
     private HealthbarRectangle healthbarRectangle;

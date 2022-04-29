@@ -5,6 +5,9 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
+/**
+ * This class is used for setting the floor images in a map.
+ */
 public class Floor extends SpriteEntity implements Collider {
     /**
      * Create a new {@code SpriteEntity}.

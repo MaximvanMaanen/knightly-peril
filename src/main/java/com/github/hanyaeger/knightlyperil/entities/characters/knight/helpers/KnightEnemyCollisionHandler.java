@@ -1,7 +1,6 @@
 package com.github.hanyaeger.knightlyperil.entities.characters.knight.helpers;
 
 import com.github.hanyaeger.api.entities.Collider;
-import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.knightlyperil.constants.SceneConstants;
 import com.github.hanyaeger.knightlyperil.entities.characters.BaseBody;
 import com.github.hanyaeger.knightlyperil.entities.characters.enemy.IEnemy;
@@ -9,6 +8,9 @@ import com.github.hanyaeger.knightlyperil.entities.characters.knight.Knight;
 
 import java.util.List;
 
+/**
+ * This class is used for handling the collision between knight and enemy.
+ */
 public class KnightEnemyCollisionHandler {
     public Knight knight;
 

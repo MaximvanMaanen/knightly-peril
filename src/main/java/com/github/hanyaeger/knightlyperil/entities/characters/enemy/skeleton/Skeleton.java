@@ -5,6 +5,9 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 
+/**
+ * This is a dynamic composite entity used as an enemy against the knight. This class binds the skeleton hitbox and sprite with each other.
+ */
 public class Skeleton extends DynamicCompositeEntity {
     private DynamicSpriteEntity sprite;
     private SkeletonHitbox hitbox;

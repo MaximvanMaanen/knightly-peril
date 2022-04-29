@@ -1,5 +1,8 @@
 package com.github.hanyaeger.knightlyperil.entities.score;
 
+/**
+ * This class sets and keeps track the total score.
+ */
 public class Score {
     public int totalScore;
 

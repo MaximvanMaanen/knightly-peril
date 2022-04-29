@@ -4,6 +4,9 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
+/**
+ * This class is used for setting the decoration images in a map.
+ */
 public class Decorations extends SpriteEntity {
     /**
      * Create a new {@code SpriteEntity}.

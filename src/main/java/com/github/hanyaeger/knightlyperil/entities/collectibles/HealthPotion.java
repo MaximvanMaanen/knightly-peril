@@ -9,6 +9,9 @@ import com.github.hanyaeger.knightlyperil.entities.characters.knight.KnightHitbo
 
 import java.util.List;
 
+/**
+ * This class is used as health potion for the knight. The knight gets one life when picking up a health potion.
+ */
 public class HealthPotion extends BaseCollectible implements Collided {
     /**
      * Create a new {@code BaseCollectible} with the given {@code resource} and {@code size} on the given {@code location}.
