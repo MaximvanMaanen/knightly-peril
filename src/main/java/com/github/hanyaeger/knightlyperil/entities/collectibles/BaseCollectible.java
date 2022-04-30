@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * This class handles the collision between character and collectible.
  */
-abstract class BaseCollectible extends SpriteEntity implements Collided {
+public abstract class BaseCollectible extends SpriteEntity implements Collided {
     /**
      * Create a new {@code SpriteEntity} with the given {@code resource} and {@code size} on the given {@code location}.
      *
